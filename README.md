@@ -17,7 +17,7 @@ var apiKey = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX';
 var string = 'dinosaurs are awesome and I love ice cream';
 
 entityExtraction(string, apiKey, function(results){
-    console.log(results); // Do some awesome stuff with sentiment data!
+    console.log(results); // Do some awesome stuff with results
 });
 ```
 
@@ -26,48 +26,61 @@ There is also the option of passing a JSON object rather than a String as the fi
 
 ## Example Output
 ```javascript
-[ profanities: [ { normalized_text: 'Weather',
-      matches:
-       [ 'Storm', 'rain', 'winds', 'winds', 'flooding', 'Weather', 'winds', 'Winds' ],
-      additional_information: { wiki: '', image: '' } } ],
-  organizations: [ { normalized_text: 'Met Office',
-      matches: [ 'Met Office', 'Met Office', 'Met Office' ],
-      additional_information:
-       { wiki: 'http://en.wikipedia.org/wiki/Met_Office',
-         image: 'https://upload.wikimedia.org/wikipedia/en/f/f4/Met_Office.svg' } } ],
-  languages: [ { normalized_text: 'Cornish',
-      matches: [ 'Cornish' ],
-      additional_information:
-       { wiki: 'http://en.wikipedia.org/wiki/Cornish_language',
-         image: 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Britonia6hcentury.png' } } ],
-  professions: [ { normalized_text: 'driver',
-      matches: [ 'drivers' ],
-      additional_information: { wiki: '', image: '' } } ],
-  places_eng: [ { normalized_text: 'Wales',
-      matches: [ 'Wales', 'Wales' ],
-      additional_information:
-       { wiki: 'http://en.wikipedia.org/wiki/Wales',
-         image: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Wales_2.svg' } },
-    { normalized_text: 'Bristol',
-      matches: [ 'Bristol' ],
-      additional_information:
-       { wiki: 'http://en.wikipedia.org/wiki/Bristol',
-         image: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Panorama_of_Bristol.jpg' } },
-    { normalized_text: 'United Kingdom',
-      matches: [ 'Britain', 'Britain' ],
-      additional_information:
-       { wiki: 'http://en.wikipedia.org/wiki/United_Kingdom',
-         image: 'https://upload.wikimedia.org/wikipedia/commons/0/04/050114_2495_london_city.jpg' } },
-    { normalized_text: 'South Wales',
-      matches: [ 'South Wales' ],
-      additional_information:
-       { wiki: 'http://en.wikipedia.org/wiki/South_Wales',
-         image: 'https://upload.wikimedia.org/wikipedia/commons/7/79/British.coalfields.19th.century.jpg' } },
-    { normalized_text: 'England',
-      matches: [ 'England', 'England' ],
-      additional_information:
-       { wiki: 'http://en.wikipedia.org/wiki/England',
-         image: 'https://upload.wikimedia.org/wikipedia/commons/1/19/London_Skyline.jpg' } } ] ]
+{ profanities:
+   [ { normalized_text: 'Weather',
+       matches:
+        [ 'Storm',
+          'rain',
+          'winds',
+          'winds',
+          'flooding',
+          'Weather',
+          'winds',
+          'Winds' ],
+       additional_information: { wiki: '', image: '' } } ],
+  organizations:
+   [ { normalized_text: 'Met Office',
+       matches: [ 'Met Office', 'Met Office', 'Met Office' ],
+       additional_information:
+        { wiki: 'http://en.wikipedia.org/wiki/Met_Office',
+          image: 'https://upload.wikimedia.org/wikipedia/en/f/f4/Met_Office.svg' } } ],
+  languages:
+   [ { normalized_text: 'Cornish',
+       matches: [ 'Cornish' ],
+       additional_information:
+        { wiki: 'http://en.wikipedia.org/wiki/Cornish_language',
+          image: 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Britonia6hcentury.png' } } ],
+  professions:
+   [ { normalized_text: 'driver',
+       matches: [ 'drivers' ],
+       additional_information: { wiki: '', image: '' } } ],
+  places_eng:
+   [ { normalized_text: 'Wales',
+       matches: [ 'Wales', 'Wales' ],
+       additional_information:
+        { wiki: 'http://en.wikipedia.org/wiki/Wales',
+          image: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Wales_2.svg' } },
+     { normalized_text: 'Bristol',
+       matches: [ 'Bristol' ],
+       additional_information:
+        { wiki: 'http://en.wikipedia.org/wiki/Bristol',
+          image: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Panorama_of_Bristol.jpg' } },
+     { normalized_text: 'United Kingdom',
+       matches: [ 'Britain', 'Britain' ],
+       additional_information:
+        { wiki: 'http://en.wikipedia.org/wiki/United_Kingdom',
+          image: 'https://upload.wikimedia.org/wikipedia/commons/0/04/050114_2495_london_city.jpg' } },
+     { normalized_text: 'South Wales',
+       matches: [ 'South Wales' ],
+       additional_information:
+        { wiki: 'http://en.wikipedia.org/wiki/South_Wales',
+          image: 'https://upload.wikimedia.org/wikipedia/commons/7/79/British.coalfields.19th.century.jpg' } },
+     { normalized_text: 'England',
+       matches: [ 'England', 'England' ],
+       additional_information:
+        { wiki: 'http://en.wikipedia.org/wiki/England',
+          image: 'https://upload.wikimedia.org/wikipedia/commons/1/19/London_Skyline.jpg' } } ] }
+
 ```
 
 ## Obtaining an API Key
