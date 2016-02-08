@@ -20,7 +20,7 @@ makeUrl = (paramaters, apiKey) ->
 
 
 formatResults = (body) ->
-  results = []
+  results = {}
   for b in body.entities
     if !results[b.type] then results[b.type] = []
     matches = []

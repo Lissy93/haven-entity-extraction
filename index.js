@@ -26,7 +26,7 @@
 
   formatResults = function(body) {
     var additionalInformation, b, i, j, len, len1, m, matches, ref, ref1, results;
-    results = [];
+    results = {};
     ref = body.entities;
     for (i = 0, len = ref.length; i < len; i++) {
       b = ref[i];
