@@ -2,7 +2,7 @@ request = require 'request'
 querystring = require 'querystring'
 
 entities = ['people_eng', 'places_eng', 'companies_eng', 'organizations',
-    'languages', 'drugs_eng', 'professions', 'universities', 'profanities',
+    'languages', 'drugs_eng', 'professions', 'universities',
     'films', 'internet', 'teams', ]
 
 makeUrl = (paramaters, apiKey) ->

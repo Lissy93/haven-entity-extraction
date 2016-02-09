@@ -5,7 +5,7 @@
 
   querystring = require('querystring');
 
-  entities = ['people_eng', 'places_eng', 'companies_eng', 'organizations', 'languages', 'drugs_eng', 'professions', 'universities', 'profanities', 'films', 'internet', 'teams'];
+  entities = ['people_eng', 'places_eng', 'companies_eng', 'organizations', 'languages', 'drugs_eng', 'professions', 'universities', 'films', 'internet', 'teams'];
 
   makeUrl = function(paramaters, apiKey) {
     var entity, host, i, len, url, urlParams;
